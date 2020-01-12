@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+<style type="text/css">
+	.snow{
+		position:absolute;
+		top:-30px;
+		opacity:1;
+		padding:10px;}
+	.snow1{
+		background:url('./nun1.png')no-repeat; }
+	.snow2{
+		background:url('./nun2.png')no-repeat; }
+	.snow3{
+		background:url('./nun3.png')no-repeat; }
+	.snow4{
+		background:url('./nun4.png')no-repeat; }
+	.snow5{
+		background:url('./nun5.png')no-repeat; }
+</style>
+  <script type="text/javascript" src="./jquery.js"></script>
+  <title>Document</title>
+ </head>
+ <body style="background:#000;">
+ </body>
+ <script type="text/javascript">
+	$(function(){
+		function createSnow(){
+			var snow = Math.floor(Math.random(5)*5)+1,
+				left = Math.floor(Math.random(5)*2000)+1;
+			$('body').append('<div class="snow snow'+snow+' new-snow" style="left:'+left+'px; transition:'+(snow*5)+'s" ></div>');
+			setTimeout(function(){move(); },30);
+		}
+		function move(speed){
+			$('.snow').css({'top':$(document).height()-50+'px'});
+			setTimeout(function(){createSnow(); },30);
+			snowDelete();
+		}
+		function snowDelete(){
+			$('.snow').each(function(){
+				console.log($(this).css('left'),$(document).height()-30+'px');
+				if($(this).css('top') == $(document).height()-50+'px'){
+					$(this).remove();
+				}
+			});
+		}
+		createSnow();
+	});
+ </script>
+</html>

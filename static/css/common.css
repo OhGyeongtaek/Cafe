@@ -1,0 +1,78 @@
+/*setting*/
+*{ margin:0; padding:0; font-family:'맑은 고딕'; }
+a{ text-decoration:none; color:#444; }
+li{ list-style:none; }
+[type=button],[type=reset],[data-url]{ cursor:pointer; }
+table{ width:100%; border-spacing:0; border-collapse:collapse;  }
+
+/*header css*/
+.wrap > header{ 
+	min-width:1000px;
+	background:#222;
+	height:100px; }
+
+.wrap > header > .header{
+	width:1000px;
+	margin:0 auto;
+	display:flex;
+	height:100px;
+	align-items:center; 
+	justify-content:space-between; }
+
+.wrap > header .header nav > ul{
+	display:flex;
+	width:600px;
+	justify-content:space-between; }
+	
+.wrap > header .header nav > ul > li{
+	position:relative; }
+
+.wrap > header .header nav > ul > li > a{ 
+	color:#fff;
+	font-family:'맑은 고딕';
+	font-weight:bold;
+	letter-spacing:-60%; }
+
+.wrap > header .header nav > ul > li > ul{
+	width:100px;
+	position:absolute;
+	top:60px;
+	z-index:10;
+	left:-20px;
+	height:0;
+	padding-right:50px;
+	text-align:center;
+	overflow:hidden;
+	transition:all 1s; }
+
+.wrap > header .header nav > ul > li > ul li{
+	background:#222;
+	font-size:12px;
+	opacity:0.8;
+	padding:10px; }
+	
+.wrap > header .header nav > ul > li > ul li a{
+	color:#fff; }
+
+.wrap > header .header nav > ul > li > ul li:hover{
+	opacity:1; }
+	
+.wrap > header .header nav > ul > li:hover ul{
+	height:150px; }
+
+.wrap > footer{ border-top:1px solid #ccc; background:#e2e2e2; }
+
+.footer{ 
+	width:1000px;
+	margin:0 auto;
+	display:flex;
+	height:80px;
+	align-items:center; }
+	
+.footer p{
+	font-size:12px;
+	font-family:'돋움'; }
+
+.aa{ opacity:1; }
+
+/* ff3c3c */
